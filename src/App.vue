@@ -46,7 +46,7 @@
       <h3>TASK LIST</h3>
       <div class="list">
 
-        <div v-for="task in tasks_asc" :class="`todo-item ${task.completed && 'done'}`">
+        <div v-for="task in tasks" :class="`todo-item ${task.completed && 'done'}`">
           <label >
             <input type="checkbox" v-model="task.completed"/>
             <span :class="`bubble ${task.category}`"></span>
@@ -82,16 +82,16 @@ const name = ref('');
 const input_text = ref('');
 const input_category = ref(null);
 
-const tasks_asc = computed(() => tasks.value.sort((a, b) => {
-  return b.createdAt - a.createdAt;
-}))
+// const tasks_asc = computed(() => tasks.value.sort((a, b) => {
+//   return b.createdAt - a.createdAt;
+// }))
 
 const addTask = () => {
   if (input_text.value.trim() === '' || input_category === null) {
     return
   }
 
-  tasks.value.push({
+  tasks.value.unshift({
     task: input_text.value,
     category: input_category.value,
     completed: false,
