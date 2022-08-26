@@ -113,7 +113,7 @@ watch(tasks, (newValue) => {
 }, {deep: true});
 
 const removeTask =(task) =>{
-  tasks.value = tasks.value.filter((t)=> t !== task)
+  tasks.value = tasks.value.filter((x)=> x !== task)
 }
 
 watch(name, (newValue) => {
