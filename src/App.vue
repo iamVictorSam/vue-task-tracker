@@ -104,9 +104,7 @@ const addTask = () => {
   input_category.value = null;
 }
 
-const resetTracker =() => {
-  return localStorage.clear();
-}
+
 
 watch(tasks, (newValue) => {
   localStorage.setItem("tasks", JSON.stringify(newValue));
