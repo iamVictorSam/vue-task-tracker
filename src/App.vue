@@ -56,10 +56,6 @@
             <input type="text" v-model="task.task">
           </div>
 
-          <div class="actions">
-            <button class="delete" @click="removeTask(task)">Delete</button>
-          </div>
-
         </div>
 
       </div>
