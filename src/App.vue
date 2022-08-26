@@ -2,22 +2,19 @@
 
   <main class="app">
     <section class="greeting">
-      <h2 class="title">
-        😊What's up, <input type="text" placeholder="Input task" v-model="name">
-      </h2>
-    </section>
+      <h3 class="title">😊MY TASK TRACKER</h3>
+    </section> 
 
-    <section class="create-todo">
-      <h3>CREATE TASKS</h3>
+    <section class="create-task">
 
       <form @submit.prevent="addTask">
-        <h3>What's on your Task List</h3>
+        <h3>What's on your Mind</h3>
         <input type="text"
                placeholder="e.g. email your boss"
                v-model="input_text"/>
         <h4>Choose a Category</h4>
 
-        <div class="options">
+        <div class="cate-option">
 
           <label>
             <input type="radio"
@@ -42,17 +39,17 @@
 
     </section>
 
-    <section class="todo-list">
+    <section class="task-list">
       <h3>TASK LIST</h3>
       <div class="list">
 
-        <div v-for="task in tasks" :class="`todo-item ${task.completed && 'done'}`">
+        <div v-for="task in tasks" :class="`task-item ${task.completed && 'done'}`">
           <label >
             <input type="checkbox" v-model="task.completed"/>
             <span :class="`bubble ${task.category}`"></span>
           </label>
 
-          <div class="todo-content">
+          <div class="task-content">
             <input type="text" v-model="task.task">
           </div>
 

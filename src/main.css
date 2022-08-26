@@ -1,17 +1,20 @@
 :root {
-    --primary: #EA40A4;
-    --business: #3A82EE;
+    --primary: #3CA7BF;
+    --business:  #b347d4;
     --personal: var(--primary);
-    --light: #EEE;
+    --light: #05103A;
     --grey: #888;
     --dark: #313154;
     --danger: #ff5b57;
 
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-    --business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-    --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+    --business-glow: 0px 0px 4px rgba(179, 71, 212, 0.75);
+    --personal-glow: 0px 0px 4px rgba(60, 167, 191, 0.75);
 }
+
+
+
 
 * {
     margin: 0;
@@ -30,7 +33,7 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 
 body {
     background: var(--light);
-    color: var(--dark);
+    color: white;
 }
 
 section {
@@ -41,14 +44,14 @@ section {
 }
 
 h3 {
-    color: var(--dark);
+    color: white;
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
 h4 {
-    color: var(--grey);
+    color: white;
     font-size: 0.875rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -66,37 +69,38 @@ h4 {
 
 .greeting .title,
 .greeting .title input {
-    color: var(--dark);
-    font-size: 1.5rem;
+    color: white;
+    font-size: 2rem;
     font-weight: 700;
 }
 
-.create-todo input[type="text"] {
+.create-task input[type="text"] {
     display: block;
     width: 100%;
     font-size: 1.125rem;
     padding: 1rem 1.5rem;
-    color: var(--dark);
-    background-color: #FFF;
+    color: white;
+    background-color: #101C43;
     border-radius: 0.5rem;
+    /* border: 1px solid var(--primary); */
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
 }
 
-.create-todo .options {
+.create-task .cate-option {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
-.create-todo .options label {
+.create-task .cate-option label {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    background-color: #FFF;
+    background-color: #101C43;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     cursor: pointer;
@@ -146,13 +150,13 @@ input:checked ~ .bubble::after {
     opacity: 1;
 }
 
-.create-todo .options label div {
-    color: var(--dark);
+.create-task .cate-option label div {
+    color: white;
     font-size: 1.125rem;
     margin-top: 1rem;
 }
 
-.create-todo input[type="submit"] {
+.create-task input[type="submit"] {
     display: block;
     width: 100%;
     font-size: 1.125rem;
@@ -165,45 +169,45 @@ input:checked ~ .bubble::after {
     transition: 0.2s ease-in-out;
 }
 
-.create-todo input[type="submit"]:hover {
+.create-task input[type="submit"]:hover {
     opacity: 0.75;
 }
 
-.todo-list .list {
+.task-list .list {
     margin: 1rem 0;
 }
 
-.todo-list .todo-item {
+.task-list .task-item {
     display: flex;
     align-items: center;
-    background-color: #FFF;
+    background-color: #101C43;
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     margin-bottom: 1rem;
 }
 
-.todo-item label {
+.task-item label {
     display: block;
     margin-right: 1rem;
     cursor: pointer;
 }
 
-.todo-item .todo-content {
+.task-item .task-content {
     flex: 1 1 0%;
 }
 
-.todo-item .todo-content input {
-    color: var(--dark);
+.task-item .task-content input {
+    color: white;
     font-size: 1.125rem;
 }
 
-.todo-item .actions {
+.task-item .actions {
     display: flex;
     align-items: center;
 }
 
-.todo-item .actions button {
+.task-item .actions button {
     display: block;
     padding: 0.5rem;
     border-radius: 0.25rem;
@@ -212,20 +216,20 @@ input:checked ~ .bubble::after {
     transition: 0.2s ease-in-out;
 }
 
-.todo-item .actions button:hover {
+.task-item .actions button:hover {
     opacity: 0.75;
 }
 
-.todo-item .actions .edit {
+.task-item .actions .edit {
     margin-right: 0.5rem;
     background-color: var(--primary);
 }
 
-.todo-item .actions .delete {
+.task-item .actions .delete {
     background-color: var(--danger);
 }
 
-.todo-item.done .todo-content input {
+.task-item.done .task-content input {
     text-decoration: line-through;
-    color: var(--grey);
+    color: white;
 }
