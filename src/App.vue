@@ -56,13 +56,15 @@
             <input type="text" v-model="task.task">
           </div>
 
+          <div class="actions">
+            <button class="delete" @click="removeTask(task)">Delete</button>
+          </div>
+
         </div>
 
       </div>
     </section>
-    <div class="actions">
-      <button class="delete" @click="resetTracker">Reset Tracker</button>
-    </div>
+
   </main>
 
 </template>
