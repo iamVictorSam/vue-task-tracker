@@ -66,7 +66,7 @@
 
 
 <script setup>
-import {ref, onMounted, computed, watch} from "vue";
+import {ref, onMounted, watch} from "vue";
 // ref --> for state management
 // onMounted --> to execute a command once the page starts
 // computed --> for mathematical computing
