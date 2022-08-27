@@ -6,16 +6,15 @@
     </section> 
 
     <section class="create-task">
-
       <form @submit.prevent="addTask">
         <h3>What's on your Mind</h3>
         <input type="text"
                placeholder="e.g. email your boss"
                v-model="input_text"/>
+
         <h4>Choose a Category</h4>
 
         <div class="cate-option">
-
           <label>
             <input type="radio"
                    name="category"
@@ -34,9 +33,9 @@
             <div>Personal</div>
           </label>
         </div>
+
         <input type="submit" value="Add Task"/>
       </form>
-
     </section>
 
     <section class="task-list">
@@ -58,7 +57,6 @@
           </div>
 
         </div>
-
       </div>
     </section>
 
@@ -92,7 +90,7 @@ const addTask = () => {
     task: input_text.value,
     category: input_category.value,
     completed: false,
-    createdAt: new Date().getTime(),
+    // createdAt: new Date().getTime(),
   })
 
   input_text.value = '';
